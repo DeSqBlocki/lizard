@@ -28,8 +28,9 @@ A fun, interactive web app featuring a round button that plays the iconic **Liza
 ```text
 /public
   /assets
-    logo.png
-  lizard.wav
+    logo.png (DIY)
+    favicon.png (DIY)
+  lizard.wav (DIY)
   index.html
   style.css
   script.js
