@@ -62,3 +62,10 @@ README.md
 - Inspired by WhatsApp UI styling  
 
 ---
+
+
+ToDo:
+- Highscore Global
+- MongoDB
+- Volume Slider 50 - 200%
+- Lizard
