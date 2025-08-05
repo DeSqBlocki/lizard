@@ -1,4 +1,4 @@
 node_modules
 lizard.wav
-logo.png
-favicon.ico
+public/assets/logo.png
+public/assets/favicon.ico
