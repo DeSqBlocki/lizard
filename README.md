@@ -19,7 +19,7 @@ A fun, interactive web app featuring a round button that plays the iconic **Liza
 
 ## Demo
 
-![Demo GIF or screenshot if available]
+<img width="538" height="1275" alt="image" src="https://github.com/user-attachments/assets/28573f5a-4a93-428f-9663-a615c166bfde" />
 
 ---
 
