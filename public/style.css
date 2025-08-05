@@ -224,7 +224,15 @@ button:active {
 }
 
 #lizard-button {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  border: none;
+  background: linear-gradient(145deg, #f0f0f0, #d0d0d0);
+  box-shadow: 4px 4px 10px #aaa, -4px -4px 10px #fff;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  -webkit-tap-highlight-color: transparent; /* 👈 This fixes the square highlight */
+  outline: none; /* 👈 Optional: disables default focus ring */
 }
-
