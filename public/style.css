@@ -223,3 +223,8 @@ button:active {
   }
 }
 
+#lizard-button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
