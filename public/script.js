@@ -17,6 +17,7 @@ function checkEasterEggs(count) {
     const popup = document.getElementById('easter-egg-popup');
 
     const eggs = {
+        1: 'test',
         69: 'nice',
         100: 'Keep it 💯',
         1337: 'leet skills detected',

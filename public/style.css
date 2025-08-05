@@ -177,45 +177,49 @@ button:active {
     user-select: none;
 }
 
-.easter-egg-popup {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ffffffee;
-    color: #222;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    display: none;
-    z-index: 999;
-    transition: opacity 0.3s ease;
+/* Easter egg popup */
+#easter-egg-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #27ae60; /* fresh green matching your gradient */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  box-shadow: 0 6px 15px rgba(39, 174, 96, 0.5);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  z-index: 9999;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-.easter-egg-popup.show {
-    display: block;
-    animation: fadeInOut 2.5s ease forwards;
+/* Show with bounce */
+#easter-egg-popup.show {
+  opacity: 1;
+  pointer-events: auto;
+  animation: bounceInDown 0.5s forwards;
 }
 
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -10px);
-    }
-
-    10% {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
-
-    90% {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translate(-50%, -10px);
-    }
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px);
+  }
+  80% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
 }
+
