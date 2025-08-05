@@ -1,0 +1,221 @@
+/* Global Layout and Background */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Container for Chat + Button */
+.container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Chat Window */
+.chat-window {
+    width: 100%;
+    max-width: 500px;
+    height: 60vh;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #075e54;
+    color: white;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#counter {
+    font-weight: 400;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.chat-body {
+    padding: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ece5dd;
+}
+
+/* Message Bubbles */
+.chat-bubble {
+    background-color: #dcf8c6;
+    padding: 10px 15px;
+    border-radius: 15px 15px 0 15px;
+    align-self: flex-end;
+    font-size: 24px;
+    max-width: 80%;
+    word-break: break-word;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: pop 0.2s ease-out;
+}
+
+/* Timestamp */
+.timestamp {
+    align-self: center;
+    font-size: 12px;
+    color: gray;
+    background: #ffffffaa;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-top: 10px;
+    animation: fade 0.3s ease-out;
+}
+
+/* Button Styling */
+button {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    font-size: 64px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes pop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    button {
+        width: 100px;
+        height: 100px;
+        font-size: 48px;
+    }
+
+    .chat-window {
+        height: 50vh;
+    }
+
+    .chat-bubble {
+        font-size: 20px;
+    }
+}
+
+/* Footer */
+.site-footer {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.footer-logo {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+    user-select: none;
+}
+
+.easter-egg-popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffffee;
+    color: #222;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 999;
+    transition: opacity 0.3s ease;
+}
+
+.easter-egg-popup.show {
+    display: block;
+    animation: fadeInOut 2.5s ease forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+}
